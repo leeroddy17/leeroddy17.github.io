@@ -5,17 +5,17 @@
   p { color: black; }
   li { color: black; }
     
-  .column {
-    float: left;
-  }
+.column {
+  float: left;
+  width: 50%;
+}
 
-  .left {
-    width: 50%;
-  }
-
-  .right {
-    width: 50%;
-  }
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
     
   .center {
   display: block;
@@ -88,7 +88,7 @@
   </head>
   
   <body>
-    
+    <div class="row">
     <div class="column">
       <div class="wrapper">
       <header>
@@ -198,6 +198,7 @@ the CHRO and board members.</li>
 
       </section>
         
+    </div>
     </div>
     </div>
 
