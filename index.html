@@ -7,15 +7,22 @@
     
 .column {
   float: left;
-  width: 50%;
 }
 
-/* Clear floats after the columns */
+.left {
+  width: 40%;
+}
+
+.right {
+  width: 60%;
+}
+    
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
+
     
   .center {
   display: block;
@@ -82,15 +89,12 @@
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <meta name="viewport" content="width=device-width">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
   </head>
   
   <body>
     <div class="row">
     <div class="column">
-      <div class="wrapper">
+      
       <header>
         <img src="my_headshot.JPG" alt="Photo" class="center"/ style="width:200px;height:300px;">
         <h1 style="text-align:center;font-size:40px;">Ronald Lee</h1>
@@ -120,14 +124,14 @@
         </center>
       
       </header>
-        </div>
+
       </div>
 
       
       
 <!-- Right Side of Page -->
 <div class="column">
-  <div class="wrapper">
+
       <section>
         <h1 style="text-align:left;font-size:40px;">About Me</h1>
 
@@ -200,8 +204,6 @@ the CHRO and board members.</li>
         
     </div>
     </div>
-    </div>
-
 
     <script src="javascripts/scale.fix.js"></script>
   </body>
