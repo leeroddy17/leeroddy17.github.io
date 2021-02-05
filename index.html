@@ -5,6 +5,18 @@
   p { color: black; }
   li { color: black; }
     
+  .column {
+    float: left;
+  }
+
+  .left {
+    width: 25%;
+  }
+
+  .right {
+    width: 75%;
+  }
+    
   .center {
   display: block;
   margin-left: auto;
@@ -77,6 +89,7 @@
   
   <body>
     <div class="wrapper">
+      <div class="column">
       <header>
         <img src="my_headshot.JPG" alt="Photo" class="center"/ style="width:200px;height:300px;">
         <h1 style="text-align:center;font-size:40px;">Ronald Lee</h1>
@@ -106,9 +119,11 @@
         </center>
       
       </header>
+       </div>
       
       
 <!-- Right Side of Page -->
+      <div class="column">
       <section>
         <h1 style="text-align:left;font-size:40px;">About Me</h1>
 
@@ -178,10 +193,8 @@ the CHRO and board members.</li>
 
 
       </section>
- <!--     <footer>
-        <p>This project is maintained by <a href="http://github.com/orderedlist">Steve Smith</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer> -->
+        </div>
+
     </div>
     <script src="javascripts/scale.fix.js"></script>
   </body>
