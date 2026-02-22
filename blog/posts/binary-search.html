@@ -1,0 +1,52 @@
+<h2>The Core Idea</h2>
+
+<p>
+  Binary search finds a target value in a <strong>sorted array</strong> by repeatedly halving
+  the search space. Instead of checking every element (O(n)), it eliminates half the
+  candidates each step — giving us O(log n).
+</p>
+
+<h2>The Invariant That Matters</h2>
+
+<p>
+  The key insight is maintaining a loop invariant: <em>the target, if it exists, is always
+  within [lo, hi]</em>.
+</p>
+
+<pre><code>def binary_search(arr, target):
+    lo, hi = 0, len(arr) - 1
+    while lo <= hi:
+        mid = lo + (hi - lo) // 2  # avoids integer overflow
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] < target:
+            lo = mid + 1
+        else:
+            hi = mid - 1
+    return -1</code></pre>
+
+<p>
+  Note: <code>mid = lo + (hi - lo) // 2</code> instead of <code>(lo + hi) // 2</code>
+  prevents integer overflow in languages like C or Java.
+</p>
+
+<h2>The Off-By-One Trap</h2>
+
+<p>
+  Most bugs in binary search come from boundary conditions. Should it be
+  <code>lo &lt;= hi</code> or <code>lo &lt; hi</code>? Should <code>hi = mid</code>
+  or <code>hi = mid - 1</code>? The answer depends on whether your interval is
+  <strong>open</strong> or <strong>closed</strong>.
+</p>
+
+<p>
+  Stick to one convention and apply it consistently — that's the real trick.
+</p>
+
+<h2>Where It Shows Up</h2>
+
+<p>
+  Binary search appears far beyond sorted arrays: finding the leftmost position
+  satisfying a condition (<code>bisect_left</code>), searching in rotated arrays,
+  and even optimizing over continuous domains in competitive programming.
+</p>

@@ -1,0 +1,42 @@
+<h2>The Guarantee Problem</h2>
+
+<p>
+  TCP (Transmission Control Protocol) ensures every packet arrives, in order, exactly
+  once. It does this with handshakes, sequence numbers, acknowledgments, and
+  retransmission. Reliable, but slow to establish and adds latency.
+</p>
+
+<p>
+  UDP (User Datagram Protocol) just… sends. No handshake. No guarantee. Fire and forget.
+</p>
+
+<h2>Why UDP Exists</h2>
+
+<p>
+  For some applications, <strong>latency matters more than reliability</strong>:
+</p>
+
+<ul>
+  <li><strong>Video calls</strong> — a dropped frame beats a frozen call waiting for retransmission</li>
+  <li><strong>Online games</strong> — you want your current position, not a delayed-but-perfect history</li>
+  <li><strong>DNS lookups</strong> — simple request/response; easier to retry than maintain a connection</li>
+  <li><strong>Streaming</strong> — a tiny glitch beats a buffering spinner</li>
+</ul>
+
+<h2>The Trade-offs at a Glance</h2>
+
+<pre><code>TCP: Connection-oriented, ordered, reliable, heavier
+UDP: Connectionless, unordered, unreliable, lightweight</code></pre>
+
+<h2>Building Reliability on UDP</h2>
+
+<p>
+  Interestingly, QUIC (the protocol underlying HTTP/3) is built on UDP — then adds
+  selective reliability, multiplexing, and encryption on top. You get the low-latency
+  connection setup of UDP with smarter reliability than raw TCP.
+</p>
+
+<blockquote>
+  "Reliable" and "fast" aren't always opposites. It depends on what
+  kind of reliability you actually need.
+</blockquote>

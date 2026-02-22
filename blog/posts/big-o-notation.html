@@ -1,0 +1,54 @@
+<h2>Why We Need It</h2>
+
+<p>
+  When we say an algorithm is "fast" or "slow," we need a machine-independent way to
+  measure it. Big-O notation describes how runtime <em>scales</em> with input size —
+  not the exact number of operations.
+</p>
+
+<h2>The Key Classes</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Notation</th>
+      <th>Name</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>O(1)</td><td>Constant</td><td>Array index lookup</td></tr>
+    <tr><td>O(log n)</td><td>Logarithmic</td><td>Binary search</td></tr>
+    <tr><td>O(n)</td><td>Linear</td><td>Linear scan</td></tr>
+    <tr><td>O(n log n)</td><td>Linearithmic</td><td>Merge sort</td></tr>
+    <tr><td>O(n²)</td><td>Quadratic</td><td>Bubble sort</td></tr>
+    <tr><td>O(2ⁿ)</td><td>Exponential</td><td>Recursive Fibonacci</td></tr>
+  </tbody>
+</table>
+
+<h2>Drop the Constants</h2>
+
+<p>
+  O(2n) and O(n) are the same thing in Big-O. We care about <em>growth rate</em>,
+  not the exact multiplier. An O(n) algorithm with a large constant can be slower
+  than O(n²) for small n — Big-O only tells you about asymptotic behavior.
+</p>
+
+<h2>Space Complexity</h2>
+
+<p>
+  Big-O applies to memory too. Recursive algorithms often use O(n) stack space even
+  if they look like they use no extra memory. This matters a lot in practice.
+</p>
+
+<h2>A Mental Model</h2>
+
+<p>
+  Imagine your input doubles in size. O(1) doesn't change. O(n) doubles.
+  O(n²) quadruples. O(2ⁿ) becomes astronomically larger. That's the intuition.
+</p>
+
+<blockquote>
+  Big-O is not about how fast your code runs — it's about how its runtime
+  grows as the problem gets bigger.
+</blockquote>

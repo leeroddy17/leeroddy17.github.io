@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ronald's Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;600&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <!-- ── Header ────────────────────────────────────────────── -->
+      <header class="site-header">
+        <div class="header-inner">
+          <span class="logo" id="logo-link">
+            <span class="bracket">&lt;</span>cs.log<span class="bracket"
+              >/&gt;</span
+            >
+          </span>
+          <p class="site-tagline">
+            Notes on computer science, one concept at a time.
+          </p>
+        </div>
+        <div class="header-rule"></div>
+      </header>
+
+      <!-- ── Main ──────────────────────────────────────────────── -->
+      <main>
+        <!-- List view -->
+        <div id="list-view">
+          <div class="list-header">
+            <span class="post-count" id="post-count"></span>
+            <input
+              class="search-box"
+              id="search"
+              type="text"
+              placeholder="Search posts…"
+            />
+          </div>
+          <div id="card-grid"></div>
+        </div>
+
+        <!-- Post view -->
+        <div id="post-view">
+          <button class="back-btn" id="back-btn">← Back</button>
+          <header class="post-header">
+            <div class="card-meta">
+              <span class="card-date" id="pv-date"></span>
+              <div class="tag-row" id="pv-tags"></div>
+            </div>
+            <h1 class="post-title" id="pv-title"></h1>
+            <p class="post-excerpt" id="pv-excerpt"></p>
+          </header>
+          <div id="post-body"></div>
+        </div>
+      </main>
+
+      <!-- ── Footer ────────────────────────────────────────────── -->
+      <footer class="site-footer">Built with curiosity.</footer>
+    </div>
+
+    <!-- posts.js must come before blog.js (it defines the POSTS array) -->
+    <script src="js/posts.js"></script>
+    <script src="js/blog.js"></script>
+  </body>
+</html>
