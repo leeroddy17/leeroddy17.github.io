@@ -1,0 +1,42 @@
+<h2>Introduction</h2>
+
+<p>This post contains my personal reading notes on the Apache Ray paper.</p>
+
+<h2>Related Readings</h2>
+
+<ul>
+  <li>
+    <a href="https://arxiv.org/pdf/1712.05889"
+      >Ray: A Distributed Framework for Emerging AI Applications</a
+    >
+  </li>
+</ul>
+
+<h2>What is Apache Ray</h2>
+
+<p>
+  Ray, proposed in 2017, is a general-purpose cluster-computing framework
+  targeted towards ML/RL data processing workloads. It implements a unified
+  interface of both <strong>tasks</strong> and <strong>actors</strong>.
+</p>
+
+<ul>
+  <li>
+    Tasks: stateless computation that tried on any server. Returns a `future`
+    which allows user to express parallelism and dependencies.
+  </li>
+  <li>
+    Actor: stateful computation (i.e., class) that exposes methods that can be
+    invoked remotely. Exposes shared mutable state to clients.
+  </li>
+</ul>
+
+<h2>Computational Model</h2>
+
+<p>
+  Ray, proposed in 2017, is a general-purpose cluster-computing framework
+  targeted towards ML/RL data processing workloads. It implements a unified
+  interface of both <strong>tasks</strong> and <strong>actors</strong>.
+</p>
+
+<blockquote>A pull quote or key insight can go here.</blockquote>

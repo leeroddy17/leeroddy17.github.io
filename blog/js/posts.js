@@ -13,13 +13,13 @@
 const POSTS = [
   {
     id: 1,
-    title: "How Binary Search Actually Works",
-    date: "2025-02-10",
-    tags: ["algorithms", "fundamentals"],
+    title: "Reading Notes: Apache Ray",
+    date: "2026-02-22",
+    tags: ["networking", "systems"],
     thumbnail: null,
     excerpt:
-      "Binary search is one of those algorithms that seems obvious once you understand it, but has surprising depth when you dig into its invariants.",
-    file: "posts/binary-search.html",
+      "Notes while reading the original paper for Apache Ray distributed computing framework",
+    file: "posts/01-apache-ray.html",
   },
   {
     id: 2,
@@ -30,15 +30,5 @@ const POSTS = [
     excerpt:
       "Big-O is the language we use to talk about algorithmic efficiency. Here's how to think about it intuitively before the formal definitions.",
     file: "posts/big-o-notation.html",
-  },
-  {
-    id: 3,
-    title: "TCP vs UDP: When Reliability Costs Too Much",
-    date: "2025-01-15",
-    tags: ["networking", "systems"],
-    thumbnail: null,
-    excerpt:
-      "TCP guarantees delivery and ordering. UDP doesn't. Here's why you'd ever choose the unreliable option — and when it's actually the right call.",
-    file: "posts/tcp-vs-udp.html",
   },
 ];
